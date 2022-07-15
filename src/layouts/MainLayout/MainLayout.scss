@@ -1,0 +1,13 @@
+.main-layout {
+    &__header {
+    }
+    &__container {
+        display: flex;
+    }
+    &__sidebar {
+        flex-grow: 1;
+    }
+    &__main {
+        flex-grow: 23;
+    }
+}
