@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { dataSidebar } from "../../constants/dataSidebar";
 import SSidebar from "./styles";
 
 const Sidebar = () => {
@@ -6,10 +8,18 @@ const Sidebar = () => {
         <SSidebar className="sidebar">
             <nav className="nav">
                 <ul>
-                    <li className="nav-link">All Task</li>
-                    <li className="nav-link">New Task</li>
-                    <li className="nav-link">Doing Task</li>
-                    <li className="nav-link">Done Task</li>
+                    {dataSidebar.map((navItem, index) => (
+                        <li className="nav-item" key={index}>
+                            <NavLink
+                                to={navItem.link}
+                                className={({ isActive }) =>
+                                    `nav-link ${isActive && "active"}`
+                                }
+                            >
+                                {navItem.title}
+                            </NavLink>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </SSidebar>
