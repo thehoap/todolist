@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { dataSidebar } from "../../constants/dataSidebar";
-import SSidebar from "./styles";
+import { dataSidebar } from "constants/dataSidebar";
+import SSidebar from "components/Sidebar/styles";
 
 const Sidebar = () => {
     return (

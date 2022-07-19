@@ -1,7 +1,6 @@
-import React from "react";
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
-import "./MainLayout.scss";
+import Header from "components/Header";
+import Sidebar from "components/Sidebar";
+import "layouts/MainLayout/MainLayout.scss";
 
 const MainLayout = ({ children }) => {
     return (

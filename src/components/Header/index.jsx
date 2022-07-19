@@ -1,7 +1,6 @@
-import React from "react";
-import { HeaderButton } from "../Button/styles";
-import { SearchInput } from "../Input/styles";
-import SHeader from "./styles";
+import { HeaderButton } from "components/Button/styles";
+import SHeader from "components/Header/styles";
+import { SearchInput } from "components/Input/styles";
 
 const Header = () => {
     return (

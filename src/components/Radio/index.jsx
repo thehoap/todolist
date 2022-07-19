@@ -1,5 +1,5 @@
 import React from "react";
-import { InputRadio, LabelRadio, Option } from "./styles";
+import { InputRadio, LabelRadio, Option } from "components/Radio/styles";
 
 const Radio = ({ label, checked, name, value, id }) => {
     const handleRadioChange = (e) => {

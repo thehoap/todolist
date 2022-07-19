@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as COLOR from "../../constants/color";
+import * as COLOR from "constants/color";
 
 export const BasedInput = styled.input`
     display: inline-block;

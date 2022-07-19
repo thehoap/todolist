@@ -1,4 +1,4 @@
-import todosSlice from "../redux/slices/todosSlice";
+import todosSlice from "redux/slices/todosSlice";
 
 const rootReducer = { todos: todosSlice.reducer };
 

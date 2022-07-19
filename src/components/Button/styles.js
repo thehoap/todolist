@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as COLOR from "../../constants/color";
+import * as COLOR from "constants/color";
 
 export const BasedButton = styled.button`
     display: inline-block;
