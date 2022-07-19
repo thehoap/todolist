@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATH } from "constants/path";
 import MainLayout from "layouts/MainLayout/MainLayout";
 import MainRoute from "routes/MainRoute";
+import Todos from "components/Todos";
 
 const Routers = () => {
     return (
@@ -11,7 +12,7 @@ const Routers = () => {
                 <Route
                     path={PATH.INDEX}
                     element={
-                        <MainRoute layout={MainLayout} component={Fragment} />
+                        <MainRoute layout={MainLayout} component={Todos} />
                     }
                 />
                 <Route
