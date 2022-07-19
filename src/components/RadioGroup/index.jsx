@@ -1,6 +1,6 @@
 import React from "react";
-import Radio from "../Radio";
-import { SRadioGroup } from "./styles";
+import Radio from "components/Radio";
+import { SRadioGroup } from "component/RadioGroup/styles";
 
 const options = [
     {

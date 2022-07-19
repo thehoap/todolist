@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Input from "../components/Input";
-import { PATH } from "../constants/path";
-import MainLayout from "../layouts/MainLayout/MainLayout";
-import MainRoute from "./MainRoute";
+import { PATH } from "constants/path";
+import MainLayout from "layouts/MainLayout/MainLayout";
+import MainRoute from "routes/MainRoute";
 
 const Routers = () => {
     return (

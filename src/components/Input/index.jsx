@@ -1,5 +1,5 @@
 import React from "react";
-import { BasedInput } from "./styles";
+import { BasedInput } from "components/Input/styles";
 
 const Input = ({ type, placeholder, name, id }) => {
     return (
