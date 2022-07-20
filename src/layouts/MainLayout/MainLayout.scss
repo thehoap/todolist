@@ -6,8 +6,11 @@
     }
     &__sidebar {
         flex-grow: 1;
+        max-width: 150px;
+        width: 100%;
     }
     &__main {
         flex-grow: 23;
+        padding: 15px;
     }
 }
