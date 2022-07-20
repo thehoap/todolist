@@ -30,7 +30,7 @@ const Todo = ({ todo }) => {
             <div className="todo-bottom">
                 <STodoText>
                     <STodoText fontWeight={700}>Description:</STodoText>
-                    <STodoText lineClamp={2}>{todo.title}</STodoText>
+                    <STodoText lineClamp={2}>{todo.description}</STodoText>
                 </STodoText>
             </div>
         </STodo>
