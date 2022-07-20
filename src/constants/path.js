@@ -3,4 +3,6 @@ export const PATH = {
     NEWTASK: "/newtask",
     DOINGTASK: "/doingtask",
     DONETASK: "/donetask",
+    
+    ADDTASK: "/addtask",
 };
