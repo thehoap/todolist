@@ -5,17 +5,12 @@ export const todoApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3004/" }),
     tagTypes: ["Todos"],
     endpoints: (builder) => ({
-        getAllTodos: builder.query({
-            query: () => ({
-                url: "/todos",
-            }),
-            providesTags: ["Todos"],
-        }),
         getTodos: builder.query({
             query: ({ status }) => ({
                 url: "/todos",
                 params: status && { status },
             }),
+            transformResponse: (result) => result.sort((a, b) => b.id - a.id),
             providesTags: ["Todos"],
         }),
         addTodo: builder.mutation({
@@ -39,12 +34,12 @@ export const todoApi = createApi({
                 url: `/todos/${id}`,
                 method: "DELETE",
             }),
+            invalidatesTags: ["Todos"],
         }),
     }),
 });
 
 export const {
-    useGetAllTodosQuery,
     useGetTodosQuery,
     useAddTodoMutation,
     useUpdateTodoMutation,
