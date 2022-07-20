@@ -7,7 +7,7 @@ export const BasedButton = styled.button`
     color: ${COLOR.SECONDARY};
     font-size: 24px;
     font-weight: 400;
-    padding: 8px 12px;
+    padding: 4px 16px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2 ease;
