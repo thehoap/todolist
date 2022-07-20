@@ -1,135 +1,135 @@
 {
   "todos": [
     {
-      "userId": 1,
       "id": 1,
+      "creator": "The Hoa",
       "title": "delectus aut autem",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 1,
       "id": 2,
+      "creator": "The Hoa",
       "title": "quis ut nam facilis et officia qui",
-      "completed": false
+      "status": "doingtask"
     },
     {
-      "userId": 1,
       "id": 3,
+      "creator": "The Hoa",
       "title": "fugiat veniam minus",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 1,
       "id": 4,
+      "creator": "The Hoa",
       "title": "et porro tempora",
-      "completed": true
+      "status": "doingtask"
     },
     {
-      "userId": 1,
       "id": 5,
+      "creator": "The Hoa",
       "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 2,
       "id": 6,
+      "creator": "The Hoa",
       "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false
+      "status": "doingtask"
     },
     {
-      "userId": 2,
       "id": 7,
+      "creator": "The Hoa",
       "title": "illo expedita consequatur quia in",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 2,
       "id": 8,
+      "creator": "The Hoa",
       "title": "quo adipisci enim quam ut ab",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 2,
       "id": 9,
+      "creator": "The Hoa",
       "title": "molestiae perspiciatis ipsa",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 2,
       "id": 10,
+      "creator": "The Hoa",
       "title": "illo est ratione doloremque quia maiores aut",
-      "completed": true
+      "status": "doingtask"
     },
     {
-      "userId": 3,
       "id": 11,
+      "creator": "The Hoa",
       "title": "vero rerum temporibus dolor",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 3,
       "id": 12,
+      "creator": "The Hoa",
       "title": "ipsa repellendus fugit nisi",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 3,
       "id": 13,
+      "creator": "The Hoa",
       "title": "et doloremque nulla",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 3,
       "id": 14,
+      "creator": "The Hoa",
       "title": "repellendus sunt dolores architecto voluptatum",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 3,
       "id": 15,
+      "creator": "The Hoa",
       "title": "ab voluptatum amet voluptas",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 4,
       "id": 16,
+      "creator": "The Hoa",
       "title": "accusamus eos facilis sint et aut voluptatem",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 4,
       "id": 17,
+      "creator": "The Hoa",
       "title": "quo laboriosam deleniti aut qui",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 4,
       "id": 18,
+      "creator": "The Hoa",
       "title": "dolorum est consequatur ea mollitia in culpa",
-      "completed": false
+      "status": "newtask"
     },
     {
-      "userId": 4,
       "id": 19,
+      "creator": "The Hoa",
       "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 4,
       "id": 20,
+      "creator": "The Hoa",
       "title": "ullam nobis libero sapiente ad optio sint",
-      "completed": true
+      "status": "donetask"
     },
     {
-      "userId": 4,
       "title": "ullam nobis libero sapiente ad optio sint",
-      "completed": true,
+      "creator": "The Hoa",
+      "status": "donetask",
       "id": 21
     },
     {
-      "userId": 4,
       "title": "ullam nobis libero sapiente ad optio sint",
-      "completed": true,
+      "creator": "The Hoa",
+      "status": "donetask",
       "id": 22
     }
   ]
