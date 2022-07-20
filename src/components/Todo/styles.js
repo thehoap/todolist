@@ -20,7 +20,7 @@ const STodo = styled.div`
 
 export default STodo;
 
-export const STodoText = styled.p`
+export const STodoText = styled.span`
     font-weight: ${(props) => props.fontWeight || 400};
     line-height: 1.4;
     color: ${(props) => props.color || "#000"};
