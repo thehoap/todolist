@@ -5,4 +5,6 @@ export const PATH = {
     DONETASK: "/donetask",
     
     ADDTASK: "/addtask",
+
+    DETAIL_TASK: "/todos/:id"
 };

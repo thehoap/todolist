@@ -36,9 +36,11 @@ const Routers = () => {
                 />
                 <Route
                     path={PATH.ADDTASK}
-                    element={
-                        <MainRoute layout={MainLayout} component={Form} />
-                    }
+                    element={<MainRoute layout={MainLayout} component={Form} />}
+                />
+                <Route
+                    path={PATH.DETAIL_TASK}
+                    element={<MainRoute layout={MainLayout} component={Form} />}
                 />
             </Routes>
         </BrowserRouter>
