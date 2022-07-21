@@ -1,9 +1,26 @@
-import React from "react";
 import { BasedInput } from "components/Input/styles";
 
-const Input = ({ type, placeholder, name, id }) => {
+const Input = ({
+    type,
+    placeholder,
+    name,
+    id,
+    value,
+    onChange,
+    disabled,
+    width,
+}) => {
     return (
-        <BasedInput type={type} placeholder={placeholder} name={name} id={id} />
+        <BasedInput
+            type={type || "text"}
+            placeholder={placeholder}
+            name={name}
+            id={id}
+            width={width}
+            value={value}
+            onChange={onChange}
+            disabled={disabled}
+        />
     );
 };
 

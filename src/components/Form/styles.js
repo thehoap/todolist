@@ -5,7 +5,13 @@ export const SForm = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column
+    flex-direction: column;
+
+    & .form__message--error {
+        color: red;
+        font-size: 16px;
+        font-weight: 700;
+    }
 `;
 
 export const FormGroup = styled.div`
