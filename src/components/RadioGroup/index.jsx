@@ -1,39 +1,41 @@
-import React from "react";
-import Radio from "components/Radio";
-import { SRadioGroup } from "component/RadioGroup/styles";
+import { InputRadio, LabelRadio, Option } from "components/Radio/styles";
+import { SRadioGroup } from "components/RadioGroup/styles";
 
 const options = [
     {
         label: "New",
         name: "status",
-        value: "new",
+        value: "newtask",
         id: "status-new",
     },
     {
         label: "Doing",
         name: "status",
-        value: "doing",
+        value: "doingtask",
         id: "status-doing",
     },
     {
         label: "Done",
         name: "status",
-        value: "done",
+        value: "donetask",
         id: "status-done",
     },
 ];
 
-const RadioGroup = () => {
+const RadioGroup = ({status, onChange}) => {
     return (
         <SRadioGroup>
             {options.map((option) => (
-                <Radio
-                    key={option.id}
-                    id={option.id}
-                    label={option.label}
-                    name={option.name}
-                    value={option.value}
-                />
+                <Option key={option.id}>
+                    <InputRadio
+                        checked={option.value === status}
+                        name={option.name}
+                        value={option.value}
+                        id={option.id}
+                        onChange={onChange}
+                    />
+                    <LabelRadio htmlFor={option.id}>{option.label}</LabelRadio>
+                </Option>
             ))}
         </SRadioGroup>
     );

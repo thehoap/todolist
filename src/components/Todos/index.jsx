@@ -2,19 +2,20 @@ import { SkeletonTodo } from "components/Skeleton";
 import Todo from "components/Todo";
 import STodos from "components/Todos/styles";
 import { ITEMS_PER_PAGE } from "constants/pagination";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useGetTodosQuery } from "services/todoApi";
+import { useLazyGetTodosQuery } from "services/todoApi";
 
 const Todos = () => {
     const location = useLocation();
     const status = location.pathname.substring(1);
 
-    const {
-        data: todos,
-        isLoading,
-        isSuccess,
-        isError,
-    } = useGetTodosQuery({ status });
+    const [getTodos, { isLoading, isSuccess, isError, data: todos }] =
+        useLazyGetTodosQuery();
+
+    useEffect(() => {
+        getTodos({ status });
+    }, [status]);
 
     return (
         <STodos>
