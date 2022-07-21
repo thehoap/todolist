@@ -6,14 +6,17 @@ export const todoApi = createApi({
     tagTypes: ["Todos"],
     endpoints: (builder) => ({
         getTodos: builder.query({
-            query: ({ status, searchText }) => {
-                console.log(searchText);
+            query: (params) => {
+                if (!params.status) {
+                    const { status, ...newParams } = params;
+                    return {
+                        url: "/todos",
+                        params: newParams,
+                    };
+                }
                 return {
                     url: "/todos",
-                    params: `?${status && `status=${status}`}&${
-                        searchText &&
-                        `title_like=${searchText}&creator_like=${searchText}`
-                    }`,
+                    params,
                 };
             },
             transformResponse: (result) => result.sort((a, b) => b.id - a.id),
