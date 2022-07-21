@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import * as COLOR from "constants/color";
+import styled from "styled-components";
 
 export const BasedInput = styled.input`
     display: inline-block;
@@ -7,6 +7,7 @@ export const BasedInput = styled.input`
     font-weight: 500;
     color: ${COLOR.TEXT};
     padding: 8px 4px;
+    width: ${props => props.width};
     border-bottom: 1px solid ${COLOR.TEXT};
 `;
 
