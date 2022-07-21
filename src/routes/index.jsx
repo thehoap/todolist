@@ -18,19 +18,19 @@ const Routers = () => {
                 <Route
                     path={PATH.NEWTASK}
                     element={
-                        <MainRoute layout={MainLayout} component={Fragment} />
+                        <MainRoute layout={MainLayout} component={Todos} />
                     }
                 />
                 <Route
                     path={PATH.DOINGTASK}
                     element={
-                        <MainRoute layout={MainLayout} component={Fragment} />
+                        <MainRoute layout={MainLayout} component={Todos} />
                     }
                 />
                 <Route
                     path={PATH.DONETASK}
                     element={
-                        <MainRoute layout={MainLayout} component={Fragment} />
+                        <MainRoute layout={MainLayout} component={Todos} />
                     }
                 />
             </Routes>
