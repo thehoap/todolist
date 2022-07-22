@@ -1,24 +1,42 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const todoApi = createApi({
-    reducerPath: "todoApi",
+    reducerPath: "api",
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3004/" }),
     tagTypes: ["Todos"],
     endpoints: (builder) => ({
         getTodos: builder.query({
-            query: ({ status }) => ({
-                url: "/todos",
-                params: status && { status },
-            }),
+            query: (params) => {
+                if (!params.status) {
+                    const { status, ...newParams } = params;
+                    return {
+                        url: "/todos",
+                        params: newParams,
+                    };
+                }
+                return {
+                    url: "/todos",
+                    params,
+                };
+            },
             transformResponse: (result) => result.sort((a, b) => b.id - a.id),
             providesTags: ["Todos"],
         }),
-        addTodo: builder.mutation({
-            query: (todo) => ({
-                url: "/todos",
-                method: "POST",
-                body: todo,
+        getTodo: builder.query({
+            query: (id) => ({
+                url: `/todos?id=${id}`,
             }),
+            providesTags: ["Todos"],
+        }),
+        addTodo: builder.mutation({
+            query: (todo) => {
+                console.log(todo);
+                return {
+                    url: "/todos",
+                    method: "POST",
+                    body: todo,
+                };
+            },
             invalidatesTags: ["Todos"],
         }),
         updateTodo: builder.mutation({
@@ -30,7 +48,7 @@ export const todoApi = createApi({
             invalidatesTags: ["Todos"],
         }),
         deleteTodo: builder.mutation({
-            query: ({ id }) => ({
+            query: (id) => ({
                 url: `/todos/${id}`,
                 method: "DELETE",
             }),
@@ -40,7 +58,8 @@ export const todoApi = createApi({
 });
 
 export const {
-    useGetTodosQuery,
+    useLazyGetTodosQuery,
+    useLazyGetTodoQuery,
     useAddTodoMutation,
     useUpdateTodoMutation,
     useDeleteTodoMutation,

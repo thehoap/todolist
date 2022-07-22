@@ -3,7 +3,7 @@ import * as COLOR from "constants/color";
 
 const SSidebar = styled.aside`
     background-color: ${COLOR.SIDEBAR};
-    height: 100vh;
+    height: 100%;
 
     & .nav-link {
         display: block;
