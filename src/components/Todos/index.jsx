@@ -23,7 +23,7 @@ const Todos = () => {
     useEffect(() => {
         getAllTodos({ status, title_like: searchText });
         setCurrentPage(1);
-    }, [status]);
+    }, [status, searchText]);
     useEffect(() => {
         getTodos({
             _page: currentPage,
