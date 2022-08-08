@@ -1,4 +1,4 @@
-import { Alert, Modal } from "antd";
+import { Alert, Modal, notification } from "antd";
 import Button from "components/Button";
 import Input from "components/Input";
 import RadioGroup from "components/RadioGroup";
@@ -40,7 +40,6 @@ const Form = () => {
             description: Yup.string().required("Please enter the description"),
         }),
         onSubmit: (values) => {
-            console.log(values);
             if (id) {
                 updateTodo({ ...values, id: id });
             } else {
@@ -83,14 +82,20 @@ const Form = () => {
             cancelText: "No",
             centered: true,
             onOk() {
-                deleteTodo(id);
                 setTimeout(() => {
                     navigate("/");
                 }, 500);
+                deleteTodo(id);
+                notification.warning({
+                    message: `Task is deleted successfully`,
+                    description:
+                        "Your task has been deleted. You can not undo your action and will go back to home page.",
+                    placement: "top",
+                });
             },
         });
     };
-    console.log(formik.values);
+
     return (
         <SForm onSubmit={formik.handleSubmit}>
             {showAlert && (
@@ -111,7 +116,7 @@ const Form = () => {
                     name="title"
                     placeholder="Enter the task's title"
                     width={"300px"}
-                    value={formik.values.title}
+                    value={formik?.values?.title}
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -125,7 +130,7 @@ const Form = () => {
                     name="creator"
                     placeholder="Enter the name of creator"
                     width={"300px"}
-                    value={formik.values.creator}
+                    value={formik?.values?.creator}
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -138,7 +143,7 @@ const Form = () => {
                     id="createAt"
                     name="createAt"
                     width={"300px"}
-                    value={formik.values.createAt}
+                    value={formik?.values?.createAt}
                     onChange={formik.handleChange}
                     disabled={true}
                 />
@@ -150,7 +155,7 @@ const Form = () => {
                     name="description"
                     placeholder="Description the task"
                     width={"300px"}
-                    value={formik.values.description}
+                    value={formik?.values?.description}
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -162,7 +167,7 @@ const Form = () => {
             {!isNaN(id) && (
                 <FormGroup>
                     <RadioGroup
-                        status={formik.values.status}
+                        status={formik?.values?.status}
                         onChange={formik.handleChange}
                     />
                 </FormGroup>
@@ -174,7 +179,6 @@ const Form = () => {
                         <Button
                             type="reset"
                             onClick={() => {
-                                console.log("reset");
                                 formik.resetForm({
                                     values: {
                                         title: todo[0]?.title,

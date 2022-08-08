@@ -19,7 +19,7 @@ export const todoApi = createApi({
                     params,
                 };
             },
-            transformResponse: (result) => result.sort((a, b) => b.id - a.id),
+            // transformResponse: (result) => result.sort((a, b) => b.id - a.id),
             providesTags: ["Todos"],
         }),
         getTodo: builder.query({
@@ -30,7 +30,6 @@ export const todoApi = createApi({
         }),
         addTodo: builder.mutation({
             query: (todo) => {
-                console.log(todo);
                 return {
                     url: "/todos",
                     method: "POST",

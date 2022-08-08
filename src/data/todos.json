@@ -121,30 +121,6 @@
       "createAt": "20-07-2022 22:32:12"
     },
     {
-      "id": 16,
-      "creator": "The Hoa",
-      "title": "accusamus eos facilis sint et aut voluptatem",
-      "description": "accusamus eos facilis sint et aut voluptatem",
-      "status": "donetask",
-      "createAt": "20-07-2022 22:32:12"
-    },
-    {
-      "id": 17,
-      "creator": "The Hoa",
-      "title": "quo laboriosam deleniti aut qui",
-      "description": "quo laboriosam deleniti aut qui",
-      "status": "donetask",
-      "createAt": "20-07-2022 22:32:12"
-    },
-    {
-      "id": 18,
-      "creator": "The Hoa",
-      "title": "dolorum est consequatur ea mollitia in culpa",
-      "description": "dolorum est consequatur ea mollitia in culpa",
-      "status": "newtask",
-      "createAt": "20-07-2022 22:32:12"
-    },
-    {
       "id": 19,
       "creator": "The Hoa",
       "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
@@ -175,14 +151,6 @@
       "status": "donetask",
       "createAt": "20-07-2022 22:32:12",
       "id": 22
-    },
-    {
-      "title": "ullam nobis libero sapiente ad optio sint",
-      "creator": "The Hoa",
-      "createAt": "20-07-2022 22:32:12",
-      "status": "donetask",
-      "description": "ullam nobis libero sapiente ad optio sint",
-      "id": 23
     },
     {
       "title": "abcd",
@@ -239,14 +207,6 @@
       "status": "newtask",
       "description": "tqwtqwtqwt",
       "id": 32
-    },
-    {
-      "title": "áhashasg",
-      "creator": "gágasgahs",
-      "createAt": "21-07-2022 17:19:11",
-      "status": "newtask",
-      "description": "âfsafafs",
-      "id": 33
     }
   ]
 }
