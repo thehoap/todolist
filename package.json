@@ -9,10 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.21.7",
     "formik": "^2.2.9",
-<<<<<<< HEAD
-=======
     "json-server": "^0.17.0",
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
     "moment": "^2.29.4",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",

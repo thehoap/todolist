@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { Alert } from "antd";
-import Button from "components/Button";
-import Input from "components/Input";
-import { useFormik } from "formik";
-import { useState } from "react";
-import { useAddTodoMutation } from "services/todoApi";
-=======
 import { Alert, Modal, notification } from "antd";
 import Button from "components/Button";
 import Input from "components/Input";
@@ -19,7 +11,6 @@ import {
     useLazyGetTodoQuery,
     useUpdateTodoMutation,
 } from "services/todoApi";
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
 import { objToTime } from "utils/helpers/dateConvert";
 import * as Yup from "yup";
 import { FormGroup, FormLabel, SForm } from "./styles";

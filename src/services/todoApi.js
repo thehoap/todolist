@@ -6,11 +6,6 @@ export const todoApi = createApi({
     tagTypes: ["Todos"],
     endpoints: (builder) => ({
         getTodos: builder.query({
-<<<<<<< HEAD
-            query: ({ status }) => ({
-                url: "/todos",
-                params: status && { status },
-=======
             query: (params) => {
                 if (!params.status) {
                     const { status, ...newParams } = params;
@@ -30,7 +25,6 @@ export const todoApi = createApi({
         getTodo: builder.query({
             query: (id) => ({
                 url: `/todos?id=${id}`,
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
             }),
             transformResponse: (result) => result.sort((a, b) => b.id - a.id),
             providesTags: ["Todos"],
