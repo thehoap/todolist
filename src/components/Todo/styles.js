@@ -9,7 +9,8 @@ const STodo = styled.div`
     height: 160px;
     border-radius: 10px;
     border: ${border};
-
+    cursor: pointer;
+    
     & > hr {
         height: 2px;
         background-color: ${COLOR.PRIMARY};
@@ -26,7 +27,7 @@ export const STodoText = styled.span`
     color: ${(props) => props.color || "#000"};
     margin-bottom: 0;
     display: -webkit-box;
-    -webkit-line-clamp: ${props => props.lineClamp};
+    -webkit-line-clamp: ${(props) => props.lineClamp};
     -webkit-box-orient: vertical;
     overflow: hidden;
 `;

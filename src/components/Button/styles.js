@@ -11,7 +11,7 @@ export const BasedButton = styled.button`
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2 ease;
-
+    
     &:hover {
         opacity: 0.8;
     }

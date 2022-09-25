@@ -104,7 +104,7 @@ body {
     line-height: 1;
     font-size: 62.5%;
     font-family: "Roboto", sans-serif;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 ol,
 ul {
@@ -134,4 +134,9 @@ option {
     font-family: "Roboto", sans-serif;
     border: 0;
     outline: none;
+}
+
+.App{
+    max-width: 1536px;
+    width: 100%;
 }

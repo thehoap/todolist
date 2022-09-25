@@ -1,5 +1,6 @@
 import STodo, { STodoText } from "components/Todo/styles";
 import { COLOR_STATUS } from "constants/color";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const statusToText = (status) => {
     switch (status) {
@@ -15,8 +16,13 @@ const statusToText = (status) => {
 };
 
 const Todo = ({ todo }) => {
+    const navigate = useNavigate();
     return (
-        <STodo>
+        <STodo
+            onClick={() => {
+                navigate(`/todos/${todo.id}`);
+            }}
+        >
             <div className="todo-top">
                 <STodoText lineClamp={1} fontWeight={700}>
                     Title: {todo.title}
