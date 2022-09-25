@@ -1,10 +1,9 @@
-import { Fragment } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Form from "components/Form";
+import Todos from "components/Todos";
 import { PATH } from "constants/path";
 import MainLayout from "layouts/MainLayout/MainLayout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainRoute from "routes/MainRoute";
-import Todos from "components/Todos";
-import Form from "components/Form";
 
 const Routers = () => {
     return (

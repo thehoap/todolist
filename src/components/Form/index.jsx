@@ -15,14 +15,6 @@ import { objToTime } from "utils/helpers/dateConvert";
 import * as Yup from "yup";
 import { FormGroup, FormLabel, SForm } from "./styles";
 
-<<<<<<< HEAD
-const Form = ({ feature }) => {
-    const isUpdateFeature = feature === "update";
-    const [showAlert, setShowAlert] = useState(false);
-
-    const [addTodo] = useAddTodoMutation();
-
-=======
 const Form = () => {
     //ADD TODO
     const [addTodo] = useAddTodoMutation();
@@ -32,17 +24,12 @@ const Form = () => {
     const [getTodo, { isSuccess, data: todo }] = useLazyGetTodoQuery();
     const [updateTodo] = useUpdateTodoMutation();
 
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
     const formik = useFormik({
         initialValues: {
             title: "",
             creator: "",
             createAt: objToTime(new Date()),
-<<<<<<< HEAD
-            // status: "newtask",
-=======
             status: "newtask",
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
             description: "",
         },
         validationSchema: Yup.object({
@@ -53,20 +40,6 @@ const Form = () => {
             description: Yup.string().required("Please enter the description"),
         }),
         onSubmit: (values) => {
-<<<<<<< HEAD
-            addTodo(values);
-            setShowAlert(true);
-            formik.resetForm({
-                values: {
-                    title: "",
-                    creator: "",
-                    createAt: objToTime(new Date()),
-                    description: "",
-                },
-            });
-        },
-    });
-=======
             if (id) {
                 updateTodo({ ...values, id: id });
             } else {
@@ -122,20 +95,15 @@ const Form = () => {
             },
         });
     };
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
 
     return (
         <SForm onSubmit={formik.handleSubmit}>
             {showAlert && (
                 <Alert
                     message="Form submitted"
-<<<<<<< HEAD
-                    description="Your task has been added to the list."
-=======
                     description={`Your task has been ${
                         id ? "updated" : "added to the list"
                     }.`}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
                     type="success"
                     showIcon
                     closable
@@ -148,11 +116,7 @@ const Form = () => {
                     name="title"
                     placeholder="Enter the task's title"
                     width={"300px"}
-<<<<<<< HEAD
-                    value={formik.values.title}
-=======
                     value={formik?.values?.title}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -166,11 +130,7 @@ const Form = () => {
                     name="creator"
                     placeholder="Enter the name of creator"
                     width={"300px"}
-<<<<<<< HEAD
-                    value={formik.values.creator}
-=======
                     value={formik?.values?.creator}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -183,11 +143,7 @@ const Form = () => {
                     id="createAt"
                     name="createAt"
                     width={"300px"}
-<<<<<<< HEAD
-                    value={formik.values.createAt}
-=======
                     value={formik?.values?.createAt}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
                     onChange={formik.handleChange}
                     disabled={true}
                 />
@@ -199,11 +155,7 @@ const Form = () => {
                     name="description"
                     placeholder="Description the task"
                     width={"300px"}
-<<<<<<< HEAD
-                    value={formik.values.description}
-=======
                     value={formik?.values?.description}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
                     onChange={formik.handleChange}
                 />
             </FormGroup>
@@ -212,10 +164,6 @@ const Form = () => {
                     {formik.errors.description}
                 </p>
             )}
-<<<<<<< HEAD
-            <FormGroup>
-                <Button type="submit">Save</Button>
-=======
             {!isNaN(id) && (
                 <FormGroup>
                     <RadioGroup
@@ -248,7 +196,6 @@ const Form = () => {
                         </Button>
                     </>
                 )}
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
             </FormGroup>
         </SForm>
     );

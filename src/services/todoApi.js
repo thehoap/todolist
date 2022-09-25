@@ -58,12 +58,8 @@ export const todoApi = createApi({
 });
 
 export const {
-<<<<<<< HEAD
-    useGetTodosQuery,
-=======
     useLazyGetTodosQuery,
     useLazyGetTodoQuery,
->>>>>>> d3a62dbba3089a44f7c2f0ac1e34aad2be28eaab
     useAddTodoMutation,
     useUpdateTodoMutation,
     useDeleteTodoMutation,
